@@ -1,0 +1,140 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color:hsl(233, 47%, 7%);
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:hsla(0, 0%, 100%, 0.6);
+    font-family:'Inter', sans-serif;
+
+}
+h1{
+    color:hsla(0, 0%, 100%);
+    font-weight:700;
+    margin-bottom:20px;
+    font-size:1.7rem;
+
+    }
+p{
+    color:hsla(0, 0%, 100%, 0.6);
+    margin-bottom:20px;
+    line-height:1.5;
+    font-size:0.7rem;
+    padding-right:50px;
+
+
+}
+.container{
+    display:flex;
+    width:60%;
+    background-color:hsl(244, 38%, 16%);
+}
+
+/* Image part */
+.image{
+    position:relative;
+    width:50%;
+    z-index:0;
+}
+.image img{
+    width:100%;
+    height:100%;
+}
+.image::after{
+    content:"";
+    position:absolute;
+    background-color:hsla(277, 63%, 25%, 0.521);
+    display:block;
+    height:100%;
+    width:100%;
+    top:0;
+    z-index:6;
+}
+
+/* Text part */
+.text{
+    width:50%;
+    margin-top:0;
+   margin-bottom:0;
+       padding:60px 50px 50px;
+}
+.violet{
+    color:hsl(277, 64%, 61%);
+}
+ul{
+    list-style:none;
+    display:flex;
+    padding-top:30px;
+}
+ul li{
+    text-transform: uppercase;
+    font-size:0.6rem;
+    font-family: 'Lexend Deca', sans-serif;
+    letter-spacing:1px;
+    margin-right:20px;
+}
+.text-white{
+    color:white;
+    font-size:1.2rem;
+    font-weight:700;
+
+}
+
+@media only screen and (max-width: 800px)  {
+    body{
+        height:100vh;
+        width:auto;
+        display:flex;
+        align-items:center;
+    }
+  .container{
+        display:flex;      
+        flex-direction:column-reverse;
+          width:80vw;
+         border-radius:5px;
+        height:90vh;
+ 
+ 
+    }
+ .image{
+     width:100%;
+     height:30%;
+  
+ }
+ .text{
+     width:100%;
+     height:70%;
+     padding:3.5rem 2rem;
+ }
+ ul{
+     flex-direction:column;
+     align-items:center;
+     text-align:center;
+     padding:10% 30%;
+     gap:1.5rem;
+
+
+ }
+ ul li{
+     text-align:center;
+     margin-right:0;
+
+ }
+ h1{
+     text-align:center;
+     font-size:1.5rem;
+     
+     
+ }
+ p{
+     font-size:0.8rem;
+     text-align:center;
+    padding:10% 0 0;
+ }
+}
